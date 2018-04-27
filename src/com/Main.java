@@ -1,17 +1,17 @@
 package com;
 
+import com.controller.MainController;
 import com.domain.Administrator;
 import com.domain.University;
+import com.repository.AdministratorRepository;
+import com.repository.impl.memory.AdministratorRepositoryMemoryImplementation;
+import com.service.AdministratorService;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        University u1 = new University();
-        System.out.println(u1);
-        u1.addAdministrator(new Administrator());
-        System.out.println(u1);
-        u1.removeAdministrator(new Administrator());
-        System.out.println(u1);
+
+        MainController m = new MainController();
+        m.doWork();
     }
 }

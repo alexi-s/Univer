@@ -42,6 +42,6 @@ public class FacultyList {
 
     @Override
     public String toString() {
-        return Arrays.toString(faculties);
+        return Arrays.toString(getFaculties());
     }
 }

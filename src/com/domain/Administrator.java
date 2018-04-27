@@ -1,9 +1,13 @@
 package com.domain;
 
+import com.list.AdminList;
+
+import java.util.Arrays;
+
 /**
  * Created by student on 25.04.2018.
  */
-public class Administrator extends Human {
+public class Administrator extends Human implements Comparable {
 
     private int typingSpeed;
 
@@ -26,10 +30,25 @@ public class Administrator extends Human {
         return result;
     }
 
+    public int getTypingSpeed() {
+        return typingSpeed;
+    }
+
+    public void setTypingSpeed(int typingSpeed) {
+        this.typingSpeed = typingSpeed;
+    }
+
     @Override
     public String toString() {
         return "Administrator{" +
                 "typingSpeed=" + typingSpeed +
                 "} " + super.toString();
     }
+
+    @Override
+    public int compareTo(Object o) {
+        Administrator administrator = (Administrator) o;
+        return Integer.compare(typingSpeed, administrator.typingSpeed);
+    }
+
 }
